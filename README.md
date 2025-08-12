@@ -1,5 +1,7 @@
-Wine_Quality
-🍷 Wine Quality Prediction Web App
+
+🍷 Wine Quality Prediction
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 A machine learning web application that predicts wine quality (Good / Low) based on chemical composition attributes, built using scikit-learn and deployed with Streamlit Cloud.
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ## Live Demo
