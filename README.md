@@ -1,51 +1,107 @@
+## 🍷 Wine Quality Prediction with Machine Learning
 
-🍷 Wine Quality Prediction
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Author: Hasindu Etampawala  
+Index : ITBIN-2211-0186  
 
-A machine learning web application that predicts wine quality (Good / Low) based on chemical composition attributes, built using scikit-learn and deployed with Streamlit Cloud.
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-## Live Demo
-🔗 Streamlit App: https://winequalityapp-itpvyxs5kpbdt6q9pehwgq.streamlit.app/
-🔗 GitHub Repo: https://github.com/HasinduEtampawala/Wine_Quality_app
+This project is a Streamlit web application that allows users to explore and analyze the Wine Quality Dataset from the UCI Machine Learning Repository.  
+It provides interactive visualizations and prediction functionalities to estimate wine quality based on its physicochemical properties.
 
-----------------------------------------------------------------------
+## 🖥️ Deployment
+The application is designed to run locally in a conda environment using Streamlit.
 
-👤 Author
-Name: G R H S C Etampawala || Index No: ITBIN-2211-0186
+Streamlit - 
+Github Link -
 
------------------------------------------------------------
-## Dataset
-Source: Wine Quality Dataset (Red Wine) - Kaggle
-Samples: 1,599 wine samples
-Features: 11 numerical physicochemical properties
-Target Variable: Wine quality score (0–10), transformed to binary classification:
-1 = Good Quality (score ≥ 7)
-0 = Low Quality (score < 7)
-Feature	Description
-fixed acidity	Fixed acidity in g/dm³
-volatile acidity	Volatile acidity in g/dm³
-citric acid	Citric acid in g/dm³
-residual sugar	Sugar content in g/dm³
-chlorides	Salt content in g/dm³
-free sulfur dioxide	Free SO₂ (mg/dm³)
-total sulfur dioxide	Total SO₂ (mg/dm³)
-density	Density (g/cm³)
-pH	Acidity level
-sulphates	Sulphates in g/dm³
-alcohol	Alcohol percentage
+## ✨ Features
 
--------------------------------------------------
+📊 Interactive Data Visualization — Histograms, correlation heatmaps, and feature distribution charts.
 
-## 🧠 Machine Learning Pipeline
-Models Used:
-Logistic Regression – Baseline linear model
-Random Forest Classifier ✅ (selected model)
-Evaluation Metrics:
-Accuracy score
-Classification report (Precision, Recall, F1-score)
-Confusion matrix
+🔍 Exploratory Data Analysis (EDA) — Analyze relationships between wine features and quality scores.
 
---------------------------------------------------------------------------------------------------------------------------------
-## 📂 Project Structure
-├── app.py ├── requirements.txt ├── model.pkl ├── data/ │ └── dataset.csv ├── notebooks/ │ └── model_training.ipynb └── README.md 
+🤖 Machine Learning Predictions — Predict wine quality using a trained RandomForestRegressor pipeline.
+
+🖱️ User-Friendly Interface — Sliders for each wine feature, prediction displayed instantly.
+
+⚡ Optimized Performance — Cached dataset and model loading for faster execution.
+
+
+## 📂 Dataset
+
+Attributes:
+
+fixed acidity
+
+volatile acidity
+
+citric acid
+
+residual sugar
+
+chlorides
+
+free sulfur dioxide
+
+total sulfur dioxide
+
+density
+
+pH
+
+sulphates
+
+alcohol
+
+quality (target variable)
+
+## 🛠️ Project Workflow
+
+1. Data Loading & EDA
+Loaded the dataset with Pandas (delimiter ;).
+
+Checked for missing values and outliers.
+
+Visualized feature distributions and correlations.
+
+2. Data Preprocessing
+Verified no missing values.
+
+Applied StandardScaler to normalize feature ranges.
+
+Wrapped preprocessing + model in a scikit-learn Pipeline for ease of use.
+
+3. Model Training
+Selected RandomForestRegressor for robust handling of numeric features and non-linear patterns.
+
+Tuned hyperparameters using RandomizedSearchCV.
+
+Evaluated with RMSE, MAE, and R² score.
+
+4. Model Saving
+Saved the trained model pipeline using:
+
+python
+Copy
+Edit
+import joblib
+joblib.dump(model, "model.pkl")
+5. App Development
+Built with Streamlit.
+
+Sliders for feature input.
+
+Predictions displayed via st.metric.
+
+Dataset preview for reference.
+
+## 📦 Project Structure
+
+your-project/
+├── app.py
+├── requirements.txt
+├── model.pkl
+├── data/
+│   └── dataset.csv
+├── notebooks/
+│   └── model_training.ipynb
+└── README.md
 
